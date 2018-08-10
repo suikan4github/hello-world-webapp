@@ -32,7 +32,7 @@ func main() {
 		if user == "" {
 			message = "No user header found"
 		} else {
-			message = fmt.Sprintf("kick Hello %s", user)
+			message = fmt.Sprintf("Hello %s", user)
 		}
 
 		internalIP, err := getIP()
