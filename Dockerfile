@@ -8,7 +8,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=${GOOS} GOARCH=${GOARCH} go build -a -o server
 
 # Final
-FROM scratch
+FROM ubuntu
 COPY --from=build-env /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build-env /src/server .
 CMD ["./server"]
