@@ -5,7 +5,7 @@ Published on docker hub:
 
 ```
 docker pull boxboat/hello-world-webapp
-docker run -e PORT=8080 -p 8080:8080 hello-world:latest
+docker run -e PORT=8080 -p 8080:8080 boxboat/hello-world-webapp:latest
 curl localhost:8080
 ```
 
